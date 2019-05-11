@@ -102,7 +102,7 @@ outF.close()
   that the *"PATH_FILE"* refers to the location of the extracted summary of
   genomic data shown above. For more way of loading data click
   [here](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio).
-```
+```{r "loading from local PATH", eval = FALSE}
 data <- read.delim("PATH_FILE, comment.char = "#")
 head(data, n= 3L)
 ```
@@ -115,7 +115,7 @@ head(data, n= 3L)
   Here we have extracted 'gencode_gr' using R commands shown below. Note to
   replace *"PATH_FILE"* with file direcotry path.
 
-```
+```{r "Extraction from raw human gtf file", eval = FALSE}
 gtf = read.table('PATH_FILE')
 gtf = subset(gtf,V5 == 'transcript')
 colnames(gtf) = c('chr','start','end','strand','biotype')
